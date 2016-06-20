@@ -1,0 +1,17 @@
+In the following table the average quality score and survey score for top 10 hospitals are shown (based on average score). We can see that for the top hospitals, survey scores are also in the high range mostly (with some lower survey scores). In addition to this, the correlation between average and survey score is about .66 which tells us that there is a good corelation between them.
+
+id      average survey_score
+420027  99.73913043478261       08.571428571429
+060032  99.73913043478261       09.285714285714
+100040  99.6086956521739        09.142857142857
+490052  99.5909090909091        06.714285714286
+340001  99.56521739130434       09.428571428571
+450675  99.4090909090909        08.142857142857
+050764  99.3913043478261        06.285714285714
+450639  99.34782608695652       07.857142857143
+340053  99.34782608695652       07.428571428571
+450358  99.30434782608695       06.000000000000
+
+
+corr_between_average_surveyscore
+0.6591384623987846
