@@ -1,0 +1,26 @@
+In order to find the best hospitals that have the most consistently high scores for a variety for procedures, the follwoing steps were taken.
+
+1. Only those procedures were chosen which had numerical score out of 100. Initially the procedure table had some measurements like Emergency Dept Volume, median time patients spent in the emergency department before leaving from the visit etc. These kind of entries are not actual procedures that were performed on the patients, therefore those entries were not included.
+
+2. procedures and hospitals that have low number of entries were also not included. So that the final table, Tbl_procedures, had a good number of hospitals each with a reasonable number of variety of procedures.
+
+3. Average and sigma values were calculated for each hospital for all the procedures. 
+
+4. A new column. min_quality_score, was calulated as (average-sigma). This value tells us what minimum quality score for that hospital and 10 best hospitals were chosen based on the highest "min_quality_score".
+
+5. We wanted to find out the hospitals that have the most consistent high scores. So we need to consider both average and sigma. We need hospitals that had high average scores and low variability and min_quality _score is the metric that takes into account both. Thats why its an appropriate metric.
+
+
+
+id      name    n       average sigma   min_quality_score
+420027  ANMED HEALTH    23      99.73913043478261       0.5289358721998452      99.21019456258277
+490052  RIVERSIDE REGIONAL MEDICAL CENTER       22      99.5909090909091        0.4916660830178167      99.09924300789127
+100040  ST VINCENT'S MEDICAL CENTER RIVERSIDE   23      99.6086956521739        0.7064381221422574      98.90225753003165
+060032  ROSE MEDICAL CENTER     23      99.73913043478261       1.0307190948808433      98.70841133990177
+340001  CAROLINAS MEDICAL CENTER-NORTHEAST      23      99.56521739130434       0.9702571132357128      98.59496027806863
+340053  NOVANT HEALTH PRESBYTERIAN MEDICAL CENTER       23      99.34782608695652       0.8134037797334654      98.53442230722305
+450639  TEXAS HEALTH HARRIS METHODIST HURST-EULESS-BEDFORD      23      99.34782608695652       0.8652064670492347      98.48261961990728
+450675  MEDICAL CENTER OF ARLINGTON     22      99.4090909090909        0.9843821739867143      98.42470873510419
+450358  METHODIST HOSPITAL,THE  23      99.30434782608695       0.9525609695742019      98.35178685651275
+050764  SHASTA REGIONAL MEDICAL CENTER  23      99.3913043478261        1.052497255383496       98.3388070924426
+

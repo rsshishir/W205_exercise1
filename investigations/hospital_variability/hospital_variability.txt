@@ -1,0 +1,18 @@
+In order to find out which procedures have the greatest variability between hospitals, I calculated sigma values for each procedures over all hospitals from the table Tbl_procedures. From the table below, head CT results has the most variability and prescribing blood thiner has the lowest variability).
+
+Now, head CT is probably the most complex procedure and its expected to have the most variability.
+
+On the otherhand STK_3 (stroke patients who were  given a prescription for a blood thinner at discharge) has been a very common procedure for a very long time now, therefore all the hospitals should have mastered it by now and hence it has the lowest variability in the table.
+
+
+id      procedure       n       average sigma
+OP_23   Head CT results 756     70.31613756613757       19.635078314728467
+IMM_3_OP_27_FAC_ADHPCT  Healthcare workers given influenza vaccination  1700    83.77352941176471       14.099808276200266
+VTE_5   Warfarin therapy discharge instructions 1666    91.67887154861945       12.767220470193214
+STK_8   Stroke Education        1689    94.01894612196566       8.480863204251243
+AMI_8a  Primary PCI Received Within 90 Minutes of Hospital Arrival      1121    95.6842105263158        6.490108477677494
+VTE_3   Anticoagulation overlap therapy 1699    94.62271924661566       6.024628823789739
+VTE_1   Venous thromboembolism prophylaxis      1702    94.12338425381904       5.954492981496002
+IMM_2   Immunization for influenza      1702    95.06815511163337       5.799129458102098
+VTE_4   Unfractionated heparin with dosages/platelet count monitoring   1477    99.0209884901828        5.32214426760009
+STK_3   Anticoagulation Therapy for Atrial Fibrillation/Flutter 1131    97.1131741821397        5.129922423520702

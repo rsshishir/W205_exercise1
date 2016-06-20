@@ -1,0 +1,26 @@
+In order to find the best states that have the most consistently high scores for a variety for procedures, the follwoing steps were taken.
+
+1. Only those procedures were chosen which had numerical score out of 100. Initially the procedure table had some measurements like Emergency Dept Volume, median time patients spent in the emergency department before leaving from the visit etc. These kind of entries are not actual procedures that were performed on the patients, therefore those entries were not included.
+
+2. procedures and hospitals that have low number of entries were also not included. So that the final table, Tbl_procedures, had a good number of hospitals each with a reasonable number of variety of procedures.
+
+3. Average and sigma values were calculated for each state over all the hospitals in that state and all the procedures. 
+
+4. A new column. min_quality_score, was calulated as (average-sigma). This value tells us what minimum quality score for that state and 10 best states were chosen based on the highest "min_quality_score".
+
+5. We wanted to find out the states that have the most consistent high scores. So we need to consider both average and sigma. We need states that had high average scores and low variability and min_quality _score is the metric that takes into account both. Thats why its an appropriate metric.
+
+6. I also would like to mention that among the 10 best states, there are some states like WY, AK have fewer number of hospitals. But those states also have lower population. I have ranked them based on the available data. We will not be able to anticipate correctly what would happen if population of those states would have increased as well as the number of hospitals.
+
+
+state   n       average sigma   min_quality_score
+WY      44      97.31818181818181       4.182065210095079       93.13611660808674
+MT      138     97.07971014492753       5.6002867346401946      91.47942341028734
+ND      136     96.65441176470588       6.198171785091847       90.45623997961404
+SD      115     96.98260869565217       9.179355484332792       87.80325321131939
+AK      23      94.69565217391305       8.232674997723853       86.4629771761892
+DC      91      96.0989010989011        9.676134621324715       86.42276647757637
+CO      562     96.58185053380782       10.853499925483217      85.7283506083246
+KS      279     96.1146953405018        10.596937704189155      85.51775763631264
+ID      206     96.08252427184466       10.95746345093321       85.12506082091146
+IA      303     95.53135313531354       10.839277700719515      84.69207543459402
